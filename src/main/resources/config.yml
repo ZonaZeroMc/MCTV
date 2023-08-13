@@ -1,0 +1,64 @@
+# Configuración para el plugin MCTVObserver
+
+# Configuraciones generales del plugin
+general:
+  pluginVersion: 1.0
+  autoCameraMode: true
+  manualCameraMode: false
+
+# Mensajes personalizables para los jugadores
+messages:
+  enterSpectatorMode: "&6¡Bienvenido al modo MCTV Observer!"
+  exitSpectatorMode: "&cHas salido del modo MCTV Observer."
+  spectatorGreeting: "&e¡Hola, Observador MCTV! Esperamos que disfrutes del espectáculo."
+
+# Configuraciones para la cámara
+camera:
+  defaultDuration: 60 # Duración por defecto en segundos
+  defaultTransition: "SMOOTH" # Tipo de transición por defecto
+  modes:
+    - "OVERHEAD"
+    - "THIRD_PERSON"
+    - "FIRST_PERSON"
+  transitionTypes:
+    - "SMOOTH"
+    - "CUT"
+
+# Configuraciones de comandos
+commands:
+  autoCamera:
+    enabled: true
+    alias: "autocam"
+  manualCamera:
+    enabled: true
+    alias: "mancam"
+
+# Opciones para la interfaz del plugin
+interface:
+  showPlayerNames: true
+  showPlayerHealth: false
+  showPlayerInventory: true
+
+# Opciones para los eventos y listeners
+listeners:
+  chat:
+    enabled: true
+    format: "&7[OBSERVER] &f%player%: %message%"
+  playerAction:
+    logActions: true
+    actionsToLog:
+      - "BLOCK_BREAK"
+      - "BLOCK_PLACE"
+
+# Configuraciones para las utilidades
+utils:
+  overlay:
+    opacity: 0.7
+    color: "#FFFFFF"
+  transition:
+    speed: 1.0
+
+# Opciones para el comportamiento y características del observador
+observer:
+  canInteract: false
+  visibilityToPlayers: "INVISIBLE" # Opciones: VISIBLE, INVISIBLE, GHOST

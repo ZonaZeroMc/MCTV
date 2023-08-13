@@ -1,0 +1,35 @@
+MCTVObserver.java - Esta es la clase principal que ya te proporcioné.
+
+listeners (un paquete para todos tus manejadores de eventos):
+
+    SpectatorModeListener.java - Maneja eventos relacionados con el modo espectador.
+    PlayerActionListener.java - Podría manejar acciones del jugador que quieras priorizar o resaltar.
+    ChatListener.java - Si decides tener comentarios en tiempo real a través del chat, este archivo podría manejar esos eventos.
+
+
+commands (un paquete para todos tus comandos):
+
+    AutoCameraCommand.java
+    MCTVCommandExecutor.java - Maneja el comando principal y subcomandos.
+    ManualCameraCommand.java, AutoCameraCommand.java, etc. - Comandos específicos que permiten a los espectadores cambiar entre diferentes modos.
+
+
+camera (un paquete para la lógica de la cámara):
+
+        CameraController.java - La lógica principal para controlar la cámara del espectador.
+    
+    models (carpeta modelos de camara)
+        fixedcamera.java
+        fristpersoncamera.java
+        followplayercamera.java
+
+utils (un paquete para funciones auxiliares y utilidades):
+
+    ConfigUtils.java - Funciones relacionadas con la configuración del plugin.  
+    TransitionUtils.java - Funciones para ayudar con las transiciones suaves de la cámara.
+    OverlayUtils.java - Funciones para ayudar con los overlays y gráficos.
+
+
+interfaces (si decides usar interfaces para asegurar un diseño limpio):
+
+    ICameraMode.java - Una interfaz que todos los modos de cámara deben implementar.

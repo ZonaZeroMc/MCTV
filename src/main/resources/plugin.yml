@@ -1,0 +1,44 @@
+name: MCTVObserver
+main: com.MCTVObserver.MCTVObserver
+version: 1.20
+api-version: 1.20
+description: >
+  Un plugin avanzado para controlar y mejorar la experiencia del modo espectador en Minecraft. 
+  Incluye funciones como transiciones suaves de cámara, integración con Discord y múltiples modos de cámara predefinidos.
+author: LAZ0RRA
+website: https://ejemplo.com
+
+# Definiciones de comandos
+commands:
+  mctv:
+    description: Comando principal para MCTVObserver.
+    usage: /<command> [subcomando] [parámetros]
+    aliases: [mctvobs, mtv]
+    # Subcomandos posibles (para referencia, no tienen función real en este archivo):
+    # start: Inicia el modo espectador.
+    # stop: Detiene el modo espectador.
+    # mode: Cambia el modo de cámara.
+    # help: Muestra ayuda sobre los comandos.
+  autocamera:
+    description: Comando para controlar la cámara automática.
+    usage: /<command> [start|stop|help]
+
+# Permiso para administradores y usuarios.
+permissions:
+  mctvobserver.admin:
+    description: Permiso para administrar el plugin.
+    default: op
+  mctvobserver.use:
+    description: Permiso para usar el plugin.
+    default: true
+
+# Dependencias y softdependencias
+# Lista de plugins de los que depende este plugin. Si no están presentes, el plugin no se cargará.
+depend: []
+# Lista de plugins que deben cargarse antes de este, pero no son esenciales.
+softdepend: []
+
+# Plataforma
+platform: paper
+
+
